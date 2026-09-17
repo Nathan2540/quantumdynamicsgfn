@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, SimpleGrid, Text, Badge } from "@chakra-ui/react";
 import colors from "../../theme/color";
-import { FaHtml5, FaRobot } from "react-icons/fa";
+import { FaHtml5, FaRobot, FaCamera, FaUserTie, FaVideo } from "react-icons/fa";
 import { GiCyberEye } from "react-icons/gi";
 import { SiTaichigraphics } from "react-icons/si";
 import { GrCloudComputer } from "react-icons/gr";
@@ -96,18 +96,15 @@ const Reg = () => {
           professional. Learn real-world skills in a real-world environment.
         </Text>
 
-        {/* Course Cards Container */}
-        <Flex
-          flexWrap="wrap"
+        {/* Course Cards Responsive Grid */}
+        <SimpleGrid
+          columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+          spacing={"20px"}
           width={"100%"}
-          gap={"20px"}
-          justifyContent={"center"}
-          alignItems={"stretch"}
           marginTop={"50px"}
         >
           {/* Web Development */}
           <Box
-            width={{ base: "100%", sm: "48%", md: "30%", lg: "18%" }}
             background={"#ffffff16"}
             padding={"20px"}
             border={"1px solid #999999"}
@@ -134,7 +131,6 @@ const Reg = () => {
 
           {/* Cybersecurity */}
           <Box
-            width={{ base: "100%", sm: "48%", md: "30%", lg: "18%" }}
             background={"#ffffff16"}
             padding={"20px"}
             border={"1px solid #999999"}
@@ -161,7 +157,6 @@ const Reg = () => {
 
           {/* AI Application */}
           <Box
-            width={{ base: "100%", sm: "48%", md: "30%", lg: "18%" }}
             background={"#ffffff16"}
             padding={"20px"}
             border={"1px solid #999999"}
@@ -188,7 +183,6 @@ const Reg = () => {
 
           {/* Graphic Design */}
           <Box
-            width={{ base: "100%", sm: "48%", md: "30%", lg: "18%" }}
             background={"#ffffff16"}
             padding={"20px"}
             border={"1px solid #999999"}
@@ -215,7 +209,6 @@ const Reg = () => {
 
           {/* Intro to Computer */}
           <Box
-            width={{ base: "100%", sm: "48%", md: "30%", lg: "18%" }}
             background={"#ffffff16"}
             padding={"20px"}
             border={"1px solid #999999"}
@@ -239,7 +232,95 @@ const Reg = () => {
             </Text>
             <Coursereg />
           </Box>
-        </Flex>
+
+          {/* Photography / Videography */}
+          <Box
+            background={"#ffffff16"}
+            padding={"20px"}
+            border={"1px solid #999999"}
+            borderRadius={"15px"}
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+          >
+            <Box fontSize={"50px"} color={"#ffffff"}>
+              <FaCamera size={60} />
+            </Box>
+            <Text fontSize={"20px"} color={colors.primary} fontWeight={900} mt="10px">
+              Photography / Videography
+            </Text>
+            <Text fontSize={"30px"} color={colors.basic} fontWeight={"900"}>
+              ₦30,000
+            </Text>
+            <Text fontSize={"14px"} color={"#999999"} mb="15px">
+              per month
+            </Text>
+            <Coursereg />
+          </Box>
+
+          {/* Virtual Assistant */}
+          <Box
+            background={"#ffffff16"}
+            padding={"20px"}
+            border={"1px solid #999999"}
+            borderRadius={"15px"}
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+            position="relative"
+          >
+            <Box fontSize={"50px"} color={"#ffffff"}>
+              <FaUserTie size={60} />
+            </Box>
+            <Text fontSize={"20px"} color={colors.primary} fontWeight={900} mt="10px">
+              Virtual Assistant
+            </Text>
+
+            <Badge colorScheme="blue" mb="8px" fontSize="11px" borderRadius="4px">
+              2 Months Course
+            </Badge>
+
+            <Text fontSize={"30px"} color={colors.basic} fontWeight={"900"}>
+              ₦20,000
+            </Text>
+            <Text fontSize={"14px"} color={"#999999"} mb="8px">
+              per month
+            </Text>
+
+            <Text fontSize={"11px"} color={"#cccccc"} fontStyle="italic" mb="15px">
+              *Requires basic MS Word & Excel knowledge
+            </Text>
+            <Coursereg />
+          </Box>
+
+          {/* Content Creation */}
+          <Box
+            background={"#ffffff16"}
+            padding={"20px"}
+            border={"1px solid #999999"}
+            borderRadius={"15px"}
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+          >
+            <Box fontSize={"50px"} color={"#ffffff"}>
+              <FaVideo size={60} />
+            </Box>
+            <Text fontSize={"20px"} color={colors.primary} fontWeight={900} mt="10px">
+              Content Creation
+            </Text>
+            <Text fontSize={"30px"} color={colors.basic} fontWeight={"900"}>
+              ₦20,000
+            </Text>
+            <Text fontSize={"14px"} color={"#999999"} mb="15px">
+              per month
+            </Text>
+            <Coursereg />
+          </Box>
+        </SimpleGrid>
       </Box>
 
       {/* Contact Section */}
@@ -283,7 +364,7 @@ const Reg = () => {
 
           <Button
             as="a"
-            href="https://canva.com" // Replace with portfolio URL
+            href="https://canva.com"
             target="_blank"
             rel="noopener noreferrer"
             width={{ base: "100%", sm: "50%" }}
