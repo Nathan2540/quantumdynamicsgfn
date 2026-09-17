@@ -292,7 +292,7 @@ const Price = () => {
                   7. Virtual Assistant (₦20,000/mo)
                 </option>
                    <option value="Content Creation">
-                  5. Content Creation (₦20,000/mo)
+                  8. Content Creation (₦20,000/mo)
                 </option>
                 <option value="None / Service Only">
                   Not Enrolling in a Course (Services Only)

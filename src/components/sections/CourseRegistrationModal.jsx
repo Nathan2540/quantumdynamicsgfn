@@ -243,6 +243,15 @@ const Coursereg = () => {
                 <option value="Intro to Computer">
                   5. Intro to Computer (₦20,000/mo)
                 </option>
+                 <option value="Photography / VideoGraphy">
+                  6. Photography / VideoGraphy (₦30,000/mo)
+                </option>
+                   <option value="Virtual Assistant">
+                  7. Virtual Assistant (₦20,000/mo)
+                </option>
+                   <option value="Content Creation">
+                  8. Content Creation (₦20,000/mo)
+                </option>
                 <option value="None / Service Only">
                   Not Enrolling in a Course (Services Only)
                 </option>
