@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar glass-effect">
+    <nav className="navbar tech-gradient-navbar">
       <div className="nav-container">
         {/* Brand Logo / Name */}
         <a href="#home" className="nav-logo">
